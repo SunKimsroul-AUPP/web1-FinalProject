@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore 35 sacred temples spanning a thousand years of Khmer civilization."
+    />
+    <title>Temples of Cambodia - Digital Museum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Temples of Cambodia home">
+          <span class="brand-khmer">ប្រាសាទ</span>
+          <span class="brand-text">Temples of Cambodia</span>
+        </a>
+
+        <ul class="nav-links" id="desktopNav">
+          <li><a class="section-link" href="#temples">Temples</a></li>
+          <li><a class="section-link" href="#about">About</a></li>
+          <li><a class="section-link" href="#history">History</a></li>
+          <li><a class="visit-pill section-link" href="#visit">Plan Visit</a></li>
+        </ul>
+
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open mobile menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div id="mobileMenu" class="mobile-menu" hidden>
+        <a class="section-link" href="#temples">Temples</a>
+        <a class="section-link" href="#about">About</a>
+        <a class="section-link" href="#history">History</a>
+        <a class="section-link" href="#visit">Plan Visit</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="heroTitle">
+        <img
+          src="./assets/hero-temple.jpg"
+          alt="Angkor Wat at golden hour"
+          width="1920"
+          height="1080"
+          loading="eager"
+          decoding="async"
+        />
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content reveal">
+          <div class="gold-divider"></div>
+          <h1 id="heroTitle">Temples of <span>Cambodia</span></h1>
+          <p>
+            Explore 35 sacred temples spanning a thousand years of Khmer
+            civilization from the pre-Angkorian sanctuaries to the majestic
+            monuments of the classical era.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#temples">Explore Temples</a>
+            <a class="btn btn-outline" href="#about">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="temples" class="section section-pattern" aria-labelledby="templesTitle">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow">Collection</p>
+            <h2 id="templesTitle">35 Sacred Temples</h2>
+            <div class="gold-divider center"></div>
+            <p class="section-lead">
+              From intimate shrines to vast temple cities, each monument tells a
+              story of devotion, power, and artistic mastery.
+            </p>
+          </header>
+
+          <div id="locationFilters" class="filter-bar" role="toolbar" aria-label="Filter temples by location"></div>
+          <div id="templeGrid" class="temple-grid"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section about" aria-labelledby="aboutTitle">
+        <div class="container about-grid">
+          <article class="reveal">
+            <p class="eyebrow">About the Collection</p>
+            <h2 id="aboutTitle">A Living Museum of <span>Khmer Heritage</span></h2>
+            <div class="gold-divider"></div>
+            <p>
+              The temples of Cambodia represent one of humanity's greatest
+              architectural achievements. Built between the 6th and 15th
+              centuries, these monuments were the spiritual and political
+              centers of the Khmer Empire, a civilization that once ruled much
+              of Southeast Asia.
+            </p>
+            <p>
+              This digital museum presents 35 of the most significant temples,
+              from the pre-Angkorian sanctuary of Sambor Prei Kuk to the iconic
+              Angkor Wat. Each temple reveals unique stories of faith,
+              ingenuity, and the relationship between humanity and nature.
+            </p>
+
+            <div class="stats" aria-label="Collection statistics">
+              <div>
+                <strong>35</strong>
+                <span>Temples</span>
+              </div>
+              <div>
+                <strong>1000+</strong>
+                <span>Years of History</span>
+              </div>
+              <div>
+                <strong>UNESCO</strong>
+                <span>World Heritage</span>
+              </div>
+            </div>
+          </article>
+
+          <figure class="about-media reveal">
+            <img
+              src="./assets/temple-taprohm.jpg"
+              alt="Tree roots embracing Ta Prohm temple walls"
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="history" class="section section-pattern" aria-labelledby="historyTitle">
+        <div class="container timeline-shell">
+          <header class="section-header reveal">
+            <p class="eyebrow">Timeline</p>
+            <h2 id="historyTitle">A Thousand Years of Glory</h2>
+            <div class="gold-divider center"></div>
+          </header>
+
+          <ol class="timeline">
+            <li class="reveal">
+              <p class="era">6th-8th Century</p>
+              <h3>Pre-Angkorian Era</h3>
+              <p>
+                The earliest Hindu temples emerged under the Chenla kingdom,
+                including Sambor Prei Kuk Cambodia's oldest temple complex.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">9th Century</p>
+              <h3>Birth of Angkor</h3>
+              <p>
+                King Jayavarman II declared independence on Phnom Kulen in 802
+                CE, founding the Khmer Empire and beginning the Angkorian age.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">10th-11th Century</p>
+              <h3>Temple Mountains Rise</h3>
+              <p>
+                Massive temple-mountains like Bakong, Pre Rup, and Ta Keo were
+                built as symbolic representations of Mount Meru.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">12th Century</p>
+              <h3>The Golden Age</h3>
+              <p>
+                Suryavarman II built Angkor Wat and Jayavarman VII constructed
+                Bayon, Ta Prohm, and Preah Khan, the empire's grandest monuments.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">13th-15th Century</p>
+              <h3>Twilight and Legacy</h3>
+              <p>
+                The empire gradually declined, but its temples endured reclaimed
+                by jungle, rediscovered by explorers, and now treasured by the
+                world.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="visit" class="section visit" aria-labelledby="visitTitle">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow">Plan Your Visit</p>
+            <h2 id="visitTitle">Travel Planner and Visitor Guide</h2>
+            <div class="gold-divider center"></div>
+            <p class="section-lead">
+              Complete your visit form, review pass options, and preview the
+              location with integrated media.
+            </p>
+          </header>
+
+          <div class="visit-layout">
+            <article class="card-panel reveal">
+              <h3>Visitor Form</h3>
+              <form id="visitForm" novalidate>
+                <div class="form-row">
+                  <label for="fullName">Full Name</label>
+                  <input id="fullName" name="fullName" type="text" required />
+                </div>
+
+                <div class="form-row split">
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                  </div>
+                  <div>
+                    <label for="visitDate">Visit Date</label>
+                    <input id="visitDate" name="visitDate" type="date" required />
+                  </div>
+                </div>
+
+                <div class="form-row split">
+                  <div>
+                    <label for="groupSize">Group Size</label>
+                    <input id="groupSize" name="groupSize" type="number" min="1" max="50" value="2" required />
+                  </div>
+                  <div>
+                    <label for="focusTemple">Focus Temple</label>
+                    <select id="focusTemple" name="focusTemple" required>
+                      <option value="">Select one</option>
+                      <option value="Angkor Wat">Angkor Wat</option>
+                      <option value="Bayon">Bayon</option>
+                      <option value="Ta Prohm">Ta Prohm</option>
+                      <option value="Banteay Srei">Banteay Srei</option>
+                    </select>
+                  </div>
+                </div>
+
+                <fieldset class="form-row">
+                  <legend>Pass Type</legend>
+                  <label><input type="radio" name="passType" value="1-Day" checked /> 1-Day</label>
+                  <label><input type="radio" name="passType" value="3-Day" /> 3-Day</label>
+                  <label><input type="radio" name="passType" value="7-Day" /> 7-Day</label>
+                </fieldset>
+
+                <div class="form-row">
+                  <label for="notes">Special Requests</label>
+                  <textarea id="notes" name="notes" rows="4" placeholder="Guide preference, sunrise tour, transport notes..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Visit Plan</button>
+                <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+              </form>
+            </article>
+
+            <article class="card-panel reveal">
+              <h3>Media and Information</h3>
+              <figure class="media-figure">
+                <img
+                  src="./assets/temple-bayon.jpg"
+                  alt="Bayon towers and smiling stone faces"
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Bayon Temple stone faces at sunrise.</figcaption>
+              </figure>
+
+              <div class="map-wrap" aria-label="Map preview of Angkor Wat area">
+                <iframe
+                  title="Map of Angkor Wat"
+                  loading="lazy"
+                  src="https://www.google.com/maps?q=Angkor%20Wat&output=embed"
+                ></iframe>
+              </div>
+
+              <div class="table-wrap">
+                <table>
+                  <caption>Official Angkor Pass Options</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Pass</th>
+                      <th scope="col">Validity</th>
+                      <th scope="col">Price (USD)</th>
+                      <th scope="col">Best For</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1-Day</td>
+                      <td>1 day</td>
+                      <td>37</td>
+                      <td>Quick highlights</td>
+                    </tr>
+                    <tr>
+                      <td>3-Day</td>
+                      <td>10 days window</td>
+                      <td>62</td>
+                      <td>Balanced exploration</td>
+                    </tr>
+                    <tr>
+                      <td>7-Day</td>
+                      <td>1 month window</td>
+                      <td>72</td>
+                      <td>Researchers and photographers</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>ប្រាសាទ</h2>
+          <p>
+            A digital museum dedicated to preserving and celebrating the sacred
+            temples of Cambodia and the Khmer Empire.
+          </p>
+        </section>
+
+        <section>
+          <h3>Plan Your Visit</h3>
+          <ul>
+            <li>Siem Reap, Cambodia</li>
+            <li>Angkor Archaeological Park</li>
+            <li>1-day, 3-day, or 7-day passes</li>
+            <li>Best season: Nov-Mar</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+          <ul>
+            <li>UNESCO World Heritage Centre</li>
+            <li>APSARA National Authority</li>
+            <li>Cambodian Ministry of Tourism</li>
+            <li>Conservation International</li>
+          </ul>
+        </section>
+      </div>
+      <p class="copyright">
+        <span id="copyrightYear"></span> Temples of Cambodia Digital Museum.
+        Built to honor Khmer heritage.
+      </p>
+    </footer>
+
+    <div id="templeModal" class="modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <article
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalDescription"
+      >
+        <button id="modalClose" class="modal-close" aria-label="Close temple details">
+          ×
+        </button>
+
+        <div id="modalImageWrap" class="modal-image-wrap"></div>
+        <div class="modal-content">
+          <header>
+            <div class="modal-title-row">
+              <h2 id="modalTitle"></h2>
+              <span id="modalReligion" class="badge"></span>
+            </div>
+            <p id="modalKhmer" class="modal-khmer"></p>
+            <div class="gold-divider"></div>
+          </header>
+
+          <p id="modalDescription"></p>
+
+          <dl class="modal-meta">
+            <div>
+              <dt>Period</dt>
+              <dd id="modalPeriod"></dd>
+            </div>
+            <div>
+              <dt>Built</dt>
+              <dd id="modalYear"></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd id="modalLocation"></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the Khmer timeline from pre-Angkorian foundations to Angkorian golden age."
+    />
+    <title>Timeline History - Temples of Cambodia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html" aria-label="Temples of Cambodia home">
+          <span class="brand-khmer">ប្រាសាទ</span>
+          <span class="brand-text">Temples of Cambodia</span>
+        </a>
+
+        <ul class="nav-links" id="desktopNav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./temples.html">Temples</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a class="active" href="./history.html">History</a></li>
+          <li><a class="visit-pill" href="./visit.html">Plan Visit</a></li>
+        </ul>
+
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open mobile menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div id="mobileMenu" class="mobile-menu" hidden>
+        <a href="./index.html">Home</a>
+        <a href="./temples.html">Temples</a>
+        <a href="./about.html">About</a>
+        <a class="active" href="./history.html">History</a>
+        <a href="./visit.html">Plan Visit</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="sub-hero history-hero" aria-labelledby="historyPageTitle">
+        <div class="sub-hero-overlay"></div>
+        <div class="container sub-hero-content reveal">
+          <p class="eyebrow">Chronology</p>
+          <h1 id="historyPageTitle">A Thousand Years of Khmer Legacy</h1>
+          <p>
+            Follow the historical timeline from early temple foundations to the
+            peak and transformation of Angkorian civilization.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-pattern" aria-labelledby="historyTitle">
+        <div class="container timeline-shell">
+          <header class="section-header reveal">
+            <p class="eyebrow">Timeline</p>
+            <h2 id="historyTitle">A Thousand Years of Glory</h2>
+            <div class="gold-divider center"></div>
+          </header>
+
+          <ol class="timeline">
+            <li class="reveal">
+              <p class="era">6th-8th Century</p>
+              <h3>Pre-Angkorian Era</h3>
+              <p>
+                The earliest Hindu temples emerged under the Chenla kingdom,
+                including Sambor Prei Kuk Cambodia's oldest temple complex.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">9th Century</p>
+              <h3>Birth of Angkor</h3>
+              <p>
+                King Jayavarman II declared independence on Phnom Kulen in 802
+                CE, founding the Khmer Empire and beginning the Angkorian age.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">10th-11th Century</p>
+              <h3>Temple Mountains Rise</h3>
+              <p>
+                Massive temple-mountains like Bakong, Pre Rup, and Ta Keo were
+                built as symbolic representations of Mount Meru.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">12th Century</p>
+              <h3>The Golden Age</h3>
+              <p>
+                Suryavarman II built Angkor Wat and Jayavarman VII constructed
+                Bayon, Ta Prohm, and Preah Khan, the empire's grandest monuments.
+              </p>
+            </li>
+            <li class="reveal">
+              <p class="era">13th-15th Century</p>
+              <h3>Twilight and Legacy</h3>
+              <p>
+                The empire gradually declined, but its temples endured reclaimed
+                by jungle, rediscovered by explorers, and now treasured by the
+                world.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>ប្រាសាទ</h2>
+          <p>
+            A digital museum dedicated to preserving and celebrating the sacred
+            temples of Cambodia and the Khmer Empire.
+          </p>
+        </section>
+
+        <section>
+          <h3>Plan Your Visit</h3>
+          <ul>
+            <li>Siem Reap, Cambodia</li>
+            <li>Angkor Archaeological Park</li>
+            <li>1-day, 3-day, or 7-day passes</li>
+            <li>Best season: Nov-Mar</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+          <ul>
+            <li>UNESCO World Heritage Centre</li>
+            <li>APSARA National Authority</li>
+            <li>Cambodian Ministry of Tourism</li>
+            <li>Conservation International</li>
+          </ul>
+        </section>
+      </div>
+      <p class="copyright">
+        <span id="copyrightYear"></span> Temples of Cambodia Digital Museum.
+        Built to honor Khmer heritage.
+      </p>
+    </footer>
+  </body>
+</html>

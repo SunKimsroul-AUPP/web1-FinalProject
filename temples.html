@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse all 35 temples of Cambodia with interactive filtering and details."
+    />
+    <title>Temples Collection - Temples of Cambodia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html" aria-label="Temples of Cambodia home">
+          <span class="brand-khmer">ប្រាសាទ</span>
+          <span class="brand-text">Temples of Cambodia</span>
+        </a>
+
+        <ul class="nav-links" id="desktopNav">
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="active" href="./temples.html">Temples</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./history.html">History</a></li>
+          <li><a class="visit-pill" href="./visit.html">Plan Visit</a></li>
+        </ul>
+
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open mobile menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <div id="mobileMenu" class="mobile-menu" hidden>
+        <a href="./index.html">Home</a>
+        <a class="active" href="./temples.html">Temples</a>
+        <a href="./about.html">About</a>
+        <a href="./history.html">History</a>
+        <a href="./visit.html">Plan Visit</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="sub-hero temples-hero" aria-labelledby="templesPageTitle">
+        <div class="sub-hero-overlay"></div>
+        <div class="container sub-hero-content reveal">
+          <p class="eyebrow">Digital Museum</p>
+          <h1 id="templesPageTitle">Temple Collection</h1>
+          <p>
+            Discover all 35 monuments and explore them by region with detailed
+            contextual information.
+          </p>
+        </div>
+      </section>
+
+      <section id="temples" class="section section-pattern" aria-labelledby="templesTitle">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="eyebrow">Collection</p>
+            <h2 id="templesTitle">35 Sacred Temples</h2>
+            <div class="gold-divider center"></div>
+            <p class="section-lead">
+              Filter by location, open each temple card, and study each era of Khmer architecture.
+            </p>
+          </header>
+
+          <div
+            id="locationFilters"
+            class="filter-bar"
+            role="toolbar"
+            aria-label="Filter temples by location"
+          ></div>
+          <div id="templeGrid" class="temple-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <h2>ប្រាសាទ</h2>
+          <p>
+            A digital museum dedicated to preserving and celebrating the sacred
+            temples of Cambodia and the Khmer Empire.
+          </p>
+        </section>
+
+        <section>
+          <h3>Plan Your Visit</h3>
+          <ul>
+            <li>Siem Reap, Cambodia</li>
+            <li>Angkor Archaeological Park</li>
+            <li>1-day, 3-day, or 7-day passes</li>
+            <li>Best season: Nov-Mar</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+          <ul>
+            <li>UNESCO World Heritage Centre</li>
+            <li>APSARA National Authority</li>
+            <li>Cambodian Ministry of Tourism</li>
+            <li>Conservation International</li>
+          </ul>
+        </section>
+      </div>
+      <p class="copyright">
+        <span id="copyrightYear"></span> Temples of Cambodia Digital Museum.
+        Built to honor Khmer heritage.
+      </p>
+    </footer>
+
+    <div id="templeModal" class="modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <article
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalDescription"
+      >
+        <button id="modalClose" class="modal-close" aria-label="Close temple details">
+          ×
+        </button>
+
+        <div id="modalImageWrap" class="modal-image-wrap"></div>
+        <div class="modal-content">
+          <header>
+            <div class="modal-title-row">
+              <h2 id="modalTitle"></h2>
+              <span id="modalReligion" class="badge"></span>
+            </div>
+            <p id="modalKhmer" class="modal-khmer"></p>
+            <div class="gold-divider"></div>
+          </header>
+
+          <p id="modalDescription"></p>
+
+          <dl class="modal-meta">
+            <div>
+              <dt>Period</dt>
+              <dd id="modalPeriod"></dd>
+            </div>
+            <div>
+              <dt>Built</dt>
+              <dd id="modalYear"></dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd id="modalLocation"></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
