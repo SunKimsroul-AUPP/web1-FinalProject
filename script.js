@@ -401,6 +401,7 @@ const filterRoot = document.getElementById("locationFilters");
 const gridRoot = document.getElementById("templeGrid");
 const yearEl = document.getElementById("copyrightYear");
 const siteHeader = document.querySelector(".site-header");
+const brandTopLink = document.querySelector('a.brand[href="#top"]');
 const sectionNavLinks = Array.from(
   document.querySelectorAll('a.section-link[href^="#"]'),
 );
@@ -635,6 +636,29 @@ function initMobileMenu() {
   });
 }
 
+function initBrandTopScroll() {
+  if (!brandTopLink) {
+    return;
+  }
+
+  brandTopLink.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto"
+      : "smooth";
+
+    window.scrollTo({
+      top: 0,
+      behavior,
+    });
+
+    if (window.location.hash) {
+      history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    }
+  });
+}
+
 function initHeaderScrollState() {
   if (!siteHeader) {
     return;
@@ -782,6 +806,7 @@ function init() {
   initTempleInteractions();
   initModalInteractions();
   initMobileMenu();
+  initBrandTopScroll();
   initHeaderScrollState();
   initSectionSpyNav();
   initForm();
