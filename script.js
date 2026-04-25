@@ -419,10 +419,15 @@ const templeImages = {
   30: "./image/Photo for Prasat web/Prasat Wat Athvea/Wat_Athvea.JPG",
   31: "./image/Photo for Prasat web/Tonle Sngout Temple/ts4.webp",
   32: "./image/Photo for Prasat web/Baksei Chamkrong Temple/2016_Angkor,_Baksei_Chamkrong_(06).jpg",
-  33: "./image/Photo for Prasat web/angkor-wat.jpg",
-  34: "./image/Photo for Prasat web/angkor-wat.jpg",
-  35: "./image/Photo for Prasat web/angkor-wat.jpg",
+  33: "./image/Photo for Prasat web/prasat sour prat.jpg",
+  34: "./image/Photo for Prasat web/west mebon.jpg",
+  35: "./image/Photo for Prasat web/sakada.webp",
 };
+
+function getGoogleMapsUrl(templeName, locationName) {
+  const query = encodeURIComponent(`${templeName} temple ${locationName} Cambodia`);
+  return `https://www.google.com/maps/search/?api=1&query=${query}`;
+}
 
 const state = {
   activeLocation: "All",
@@ -473,7 +478,11 @@ function getTempleMarkup(temple) {
       </div>
       <p class="temple-sub">${temple.khmerName} · ${temple.year}</p>
       <p class="temple-desc">${temple.description}</p>
-      <p class="temple-loc">&#128205; ${temple.location}</p>
+      <p class="temple-loc">
+      <a href="${getGoogleMapsUrl(temple.name, temple.location)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+    📍 ${temple.location}
+      </a>
+      </p>
     </div>
   </article>`;
 }
@@ -532,7 +541,7 @@ function openModal(temple) {
   modalDescription.textContent = temple.description;
   modalPeriod.textContent = temple.period;
   modalYear.textContent = temple.year;
-  modalLocation.textContent = temple.location;
+  modalLocation.innerHTML = `<a href="${getGoogleMapsUrl(temple.name, temple.location)}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">${temple.location}</a>`;
 
   const imageSrc = templeImages[temple.id];
   modalImageWrap.innerHTML = imageSrc
